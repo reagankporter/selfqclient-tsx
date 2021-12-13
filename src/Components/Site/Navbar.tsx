@@ -27,6 +27,7 @@ class Navbar extends React.Component<TokenTypes, {}> {
             <div>
                 <h1 className="TitleTwo">SelfQ.</h1>
                 <Logout clearLocalStorage={this.clearLocalStorage} />
+                <hr/>
             </div>
         )
     }

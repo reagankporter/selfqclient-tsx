@@ -3,6 +3,7 @@ import Feelings from '../Feeling/Feeling';
 import Journals from '../Journal/Journal'
 import Quote from '../Quote/Quote'
 import { Route, Link, Routes } from 'react-router-dom';
+import '/Users/reagank/ElevenFiftyProjects/selfqproject/Client/selfq-client-tsx/src/Components/Site/Sidebar.css'
 
 
 type TokenTypes = {
@@ -20,17 +21,19 @@ class Sidebar extends React.Component<TokenTypes, {}> {
 
     render() {
         return(
-        <div>
-            <div>
-                <ul>
-                <li><Link to='/quote'>Quote Generator</Link></li>
-                    <li><Link to='/feelings'>Feeling Log</Link></li>
-                    <li><Link to='/journals'>Day Log</Link></li>
+        <div className='sidebar'>
+            <div className='sidebar-list-styling'>
+                <ul id='sidebarul'>
+                    <li><Link to='/quote' className='link'>Quote Generator</Link></li>
+                    <br/>
+                    <li><Link to='/feelings' className='link' >Feeling Log</Link></li>
+                    <br/>
+                    <li><Link to='/journals' className='link'>Day Log</Link></li>
                 </ul>
             </div>
-            <div>
+            <div className='sidebar-route'>
                 <Routes>
-                    <Route path='/quote' element={<Quote />} />
+                    <Route path='/quote' element={<Quote/>} />
                     <Route path='/feelings' element={<Feelings token={this.props.token} />} />
                     <Route path='/journals' element={<Journals token={this.props.token} />} />
                 </Routes>

@@ -77,7 +77,7 @@ class CreateJournal extends React.Component<TokenTypes, JournalCreate> {
                     <br/>
                     <Input className='feelinginput' value={this.state.rating} onChange={(e) => this.setState({rating: e.target.value})} />
                 </FormGroup>
-                <Button className="feelingbutton" type='submit' onClick={this.handleSubmit}>Add Day Log</Button>
+                <Button className="feelingbutton" type='submit' onClick={this.handleSubmit} >Add Day Log</Button>
             </Form>
         </div>
         )

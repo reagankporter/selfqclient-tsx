@@ -1,8 +1,9 @@
-import React, {ReactElement, ReactNode} from "react";
+import React from "react";
 import {BrowserRouter as Router} from 'react-router-dom';
 import './App.css'
 import Home from './Components/Site/Home';
 import Auth from './Components/Auth/Auth';
+import Logout from './Components/Logout/Logout'
 
     type TokenTypes = {
         sessionToken: string | undefined | null,
@@ -38,7 +39,6 @@ import Auth from './Components/Auth/Auth';
         localStorage.clear();
         this.setState({
             sessionToken: undefined,
-            // role: '',
         })
 
     }
@@ -54,12 +54,12 @@ import Auth from './Components/Auth/Auth';
 
     render() {
         return(
-            <div className="App">
-                
+            <div className="App">   
                     <Router>
                         {this.viewConductor()}
                     </Router>
 
+                    <Logout clearLocalStorage={this.clearLocalStorage}/>
             </div>
         )
     }

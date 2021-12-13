@@ -25,30 +25,30 @@ class CreateFeeling extends React.Component<TokenTypes, FeelingCreate> {
         }
     }
 
-    handleSubmit = (e: React.MouseEvent) => {
-        e.preventDefault();
-        console.log('feeling log created');
-        fetch(`http://localhost:3001/feeling/create`, {
-            method: 'POST',
-            body: JSON.stringify({
-                feeling: {
-                    howFeeling: this.state.howFeeling,
-                    happyFeeling: this.state.happyFeeling,
-                    okayFeeling: this.state.okayFeeling,
-                    sadFeeling: this.state.sadFeeling,
-        }
-    }),
-    headers: new Headers({
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${this.props.token}`
+        handleSubmit = (e: React.MouseEvent) => {
+            e.preventDefault();
+            console.log('feeling log created');
+            fetch(`http://localhost:3001/feeling/create`, {
+                method: 'POST',
+                body: JSON.stringify({
+                    feeling: {
+                        howFeeling: this.state.howFeeling,
+                        happyFeeling: this.state.happyFeeling,
+                        okayFeeling: this.state.okayFeeling,
+                        sadFeeling: this.state.sadFeeling,
+            }
+        }),
+        headers: new Headers({
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${this.props.token}`
+            })
         })
-    })
-.then(res => res.json())
-.then((data) => {
-    console.log(data);
-    })
-.catch((err) => console.log(`[Error}: ${err}]`))     
-}
+    .then(res => res.json())
+    .then((data) => {
+        console.log(data);
+        })
+    .catch((err) => console.log(`[Error}: ${err}]`))     
+    }
 
     render() {
         return(
@@ -77,7 +77,7 @@ class CreateFeeling extends React.Component<TokenTypes, FeelingCreate> {
                     <br/>
                     <Input className='feelinginput' value={this.state.sadFeeling} onChange={(e) => this.setState({sadFeeling: e.target.value})} />
                 </FormGroup>
-                <Button className="feelingbutton" type='submit' onClick={this.handleSubmit}>Add Feeling Log</Button>
+                <button className="feelingbutton" type='submit' onClick={this.handleSubmit}>Add Feeling Log </button>
             </Form>
         </div>
         )

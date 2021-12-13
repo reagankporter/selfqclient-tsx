@@ -116,9 +116,9 @@ class JournalIndex extends React.Component<TokenTypes, JournalGet> {
                             <CardGroup key={index}>
                                 <Card className={'card'}>
                                 <h4><b>{journal.date}</b></h4>
-                                <p><b><i>Happy: </i></b>{journal.howDay}</p>
-                                    <p><b><i>Okay: </i></b>{journal.improveDay}</p>
-                                    <p><b><i>Sad: </i></b>{journal.rating}</p>
+                                <p><b><i>How? </i></b>{journal.howDay}</p>
+                                    <p><b><i>Improve? </i></b>{journal.improveDay}</p>
+                                    <p><b><i>Rating? </i></b>{journal.rating}</p>
                                     <Button className="feelingbutton" onClick={() => this.setState({update: !this.state.update})}>Update</Button>
                                     <Button className="feelingbutton" onClick={() => this.deleteJournal(journal.id)}>Delete Feeling Log</Button>  
                                     {this.state.update ? (
@@ -129,19 +129,19 @@ class JournalIndex extends React.Component<TokenTypes, JournalGet> {
                                             <br/>
                                             <input className='feelinginput' type='type' id='how' value={this.state.date} onChange={(e) => this.setState({date: e.target.value})} />  
                                             <br/>
-                                            <label className='feelinglabel' htmlFor='happy'>Happy?</label>
+                                            <label className='feelinglabel' htmlFor='happy'>How?</label>
                                             <br/>
                                             <input className='feelinginput' type='type' id='happy' value={this.state.howDay} onChange={(e) => this.setState({howDay: e.target.value})} />  
                                             <br/>
-                                            <label className='feelinglabel' htmlFor='okay'>Okay?</label>
+                                            <label className='feelinglabel' htmlFor='okay'>Improve?</label>
                                             <br/>
                                             <input className='feelinginput' type='type' id='okay' value={this.state.improveDay} onChange={(e) => this.setState({improveDay: e.target.value})} />  
                                             <br/>
-                                            <label className='feelinglabel' htmlFor='okay'>Sad?</label>
+                                            <label className='feelinglabel' htmlFor='okay'>Rating?</label>
                                             <br/>
                                             <input className='feelinginput' type='type' id='sad' value={this.state.rating} onChange={(e) => this.setState({rating: e.target.value})} />  
                                             <br/>
-                                            <button className="feelingbutton" type='submit'>Submit</button>
+                                            <button className="feelingbutton" type='submit'  >Submit</button>
                                         </form>
                                         </div>
                                     ): null }

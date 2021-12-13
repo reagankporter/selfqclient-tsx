@@ -15,7 +15,7 @@ class Home extends React.Component<TokenTypes, {}> {
     render() {
         return(
             <div>
-                
+                <h3 className='logoutt'>Logout</h3>   
                 <Navbar token={this.props.token} />
                 <Sidebar token={this.props.token} />
             </div>
