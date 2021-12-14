@@ -1,4 +1,4 @@
-# SelfQ Server
+# SelfQ Client
 
 Creator: Reagan Porter
 
