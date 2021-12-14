@@ -6,6 +6,8 @@ switch(window.location.hostname) {
         break;
     case "selfqclient.herokuapp.com":
         APIURL = "https://selfqserver.herokuapp.com"
+        break;
+    default:
 }
 
 export default APIURL;
