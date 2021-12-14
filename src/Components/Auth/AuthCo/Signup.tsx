@@ -1,7 +1,6 @@
 import React from 'react';
 import APIURL from '../../../helpers/enviroment';
 import { Button } from 'reactstrap';
-import { addSyntheticLeadingComment } from 'typescript';
 
 type SignUpTypes ={
     email: string,
@@ -32,7 +31,7 @@ class SignUp extends React.Component<SessionProps, SignUpTypes> {
     e.preventDefault();
     console.log('Sign Up Completed!')
 
-    fetch(`http://localhost:3001/user/register`, {
+    fetch(`${APIURL}/user/register`, {
             method: 'POST',
             body: JSON.stringify({
                 user: {

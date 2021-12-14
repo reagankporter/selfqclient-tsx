@@ -29,7 +29,7 @@ class Login extends React.Component <SessionProps, LoginTypes> {
         console.log('Login Completed')
 
     
-        fetch(`http://localhost:3001/user/login`, {
+        fetch(`${APIURL}/user/login`, {
                 method: 'POST',
                 body: JSON.stringify({
                     user: {

@@ -43,7 +43,7 @@ class FeelingIndex extends React.Component<TokenTypes, FeelingGet> {
     }
 
     feelingCo = () => {
-        fetch(`http://localhost:3001/feeling/mine`, {
+        fetch(`${APIURL}/feeling/mine`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ class FeelingIndex extends React.Component<TokenTypes, FeelingGet> {
     }
 
     deleteFeeling = (id: any) => {
-        fetch(`http://localhost:3001/feeling/delete/${id}`,{
+        fetch(`${APIURL}/feeling/delete/${id}`,{
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ class FeelingIndex extends React.Component<TokenTypes, FeelingGet> {
         }
 
         updateFeeling = (id: any) => {
-            fetch(`http://localhost:3001/feeling/update/${id}`, {
+            fetch(`${APIURL}/feeling/update/${id}`, {
                 method: 'PUT',
                 body: JSON.stringify({
                     feeling: {

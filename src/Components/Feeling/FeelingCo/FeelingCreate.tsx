@@ -29,7 +29,7 @@ class CreateFeeling extends React.Component<TokenTypes, FeelingCreate> {
         handleSubmit = (e: React.MouseEvent) => {
             e.preventDefault();
             console.log('feeling log created');
-            fetch(`http://localhost:3001/feeling/create`, {
+            fetch(`${APIURL}/feeling/create`, {
                 method: 'POST',
                 body: JSON.stringify({
                     feeling: {

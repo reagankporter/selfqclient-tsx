@@ -43,7 +43,7 @@ class JournalIndex extends React.Component<TokenTypes, JournalGet> {
     }
 
     JournalCo = () => {
-        fetch(`http://localhost:3001/journal/mine`, {
+        fetch(`${APIURL}/journal/mine`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ class JournalIndex extends React.Component<TokenTypes, JournalGet> {
     }
 
     deleteJournal = (id: any) => {
-        fetch(`http://localhost:3001/journal/delete/${id}`,{
+        fetch(`${APIURL}/journal/delete/${id}`,{
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ class JournalIndex extends React.Component<TokenTypes, JournalGet> {
         }
 
         updateJournal = (id: any) => {
-            fetch(`http://localhost:3001/journal/update/${id}`, {
+            fetch(`${APIURL}/journal/update/${id}`, {
                 method: 'PUT',
                 body: JSON.stringify({
                     journal: {

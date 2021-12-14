@@ -29,7 +29,7 @@ class CreateJournal extends React.Component<TokenTypes, JournalCreate> {
     handleSubmit = (e: React.MouseEvent) => {
         e.preventDefault();
         console.log('day log created');
-        fetch(`http://localhost:3001/journal/create`, {
+        fetch(`${APIURL}/journal/create`, {
             method: 'POST',
             body: JSON.stringify({
                 journal: {
