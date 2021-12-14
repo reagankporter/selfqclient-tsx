@@ -3,6 +3,7 @@ import APIURL from '../../../helpers/enviroment'
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 type TokenTypes = {
+    JournalCo: () => void,
     token: string | null | undefined,
 }
 
@@ -46,6 +47,7 @@ class CreateJournal extends React.Component<TokenTypes, JournalCreate> {
 .then(res => res.json())
 .then((data) => {
     console.log(data);
+    this.props.JournalCo();
     })
 .catch((err) => console.log(`[Error}: ${err}]`))     
 }

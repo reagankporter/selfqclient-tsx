@@ -3,6 +3,7 @@ import APIURL from '../../../helpers/enviroment'
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 type TokenTypes = {
+    feelingCo: () => void,
     token: string | null | undefined,
 }
 
@@ -46,6 +47,7 @@ class CreateFeeling extends React.Component<TokenTypes, FeelingCreate> {
     .then(res => res.json())
     .then((data) => {
         console.log(data);
+        this.props.feelingCo();
         })
     .catch((err) => console.log(`[Error}: ${err}]`))     
     }
@@ -77,7 +79,7 @@ class CreateFeeling extends React.Component<TokenTypes, FeelingCreate> {
                     <br/>
                     <Input className='feelinginput' value={this.state.sadFeeling} onChange={(e) => this.setState({sadFeeling: e.target.value})} />
                 </FormGroup>
-                <button className="feelingbutton" type='submit' onClick={this.handleSubmit}>Add Feeling Log </button>
+                <button className="feelingbutton" type='submit' onClick={(e) => this.handleSubmit (e)}>Add Feeling Log </button>
             </Form>
         </div>
         )

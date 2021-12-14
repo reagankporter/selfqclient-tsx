@@ -1,11 +1,13 @@
 import React from 'react';
 import APIURL from '../../../helpers/enviroment';
 import { Button } from 'reactstrap';
+import { addSyntheticLeadingComment } from 'typescript';
 
 type SignUpTypes ={
     email: string,
     username: string,
     password: string,
+
 }
 
 type SessionProps = {
@@ -21,6 +23,7 @@ class SignUp extends React.Component<SessionProps, SignUpTypes> {
             email: '',
             username: '',
             password: '',
+
         }
     }
 

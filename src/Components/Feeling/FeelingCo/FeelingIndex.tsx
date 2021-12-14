@@ -2,6 +2,7 @@ import React from 'react';
 import APIURL from '../../../helpers/enviroment'
 import { Container, Row, Col } from 'reactstrap';
 import { CardGroup, Card, Button } from 'reactstrap';
+import FeelingCreate from './FeelingCreate'
 
 type TokenTypes = {
     token: string | null | undefined,
@@ -156,7 +157,8 @@ class FeelingIndex extends React.Component<TokenTypes, FeelingGet> {
         render() {
             return(
                 <div>
-                    <h3><u>My Feelings</u></h3>
+                    <FeelingCreate token={this.props.token} feelingCo={this.feelingCo} />
+                    <h3>My Feelings</h3>
                     <this.mapFeeling howFeeling={this.state.howFeeling} happyFeeling={this.state.happyFeeling} okayFeeling={this.state.okayFeeling} sadFeeling={this.state.sadFeeling} feeling={this.state.feeling} />
                 </div>
         )

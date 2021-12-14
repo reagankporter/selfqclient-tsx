@@ -17,7 +17,7 @@ class Feelings extends React.Component<TokenTypes, {}> {
         return(
             <div>
                 <h2>Feeling Log</h2>
-                <FeelingCreate token={this.props.token} />
+                {/* <FeelingCreate token={this.props.token} /> */}
                 <FeelingIndex token={this.props.token} />
             </div>
         )

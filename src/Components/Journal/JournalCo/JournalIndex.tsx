@@ -2,6 +2,7 @@ import React from 'react';
 import APIURL from '../../../helpers/enviroment'
 import { Container, Row, Col } from 'reactstrap';
 import { CardGroup, Card, Button } from 'reactstrap';
+import JournalCreate from './JournalCreate';
 
 type TokenTypes = {
     token: string | null | undefined,
@@ -141,7 +142,7 @@ class JournalIndex extends React.Component<TokenTypes, JournalGet> {
                                             <br/>
                                             <input className='feelinginput' type='type' id='sad' value={this.state.rating} onChange={(e) => this.setState({rating: e.target.value})} />  
                                             <br/>
-                                            <button className="feelingbutton" type='submit'  >Submit</button>
+                                            <button className="feelingbutton" type='submit'>Submit</button>
                                         </form>
                                         </div>
                                     ): null }
@@ -156,7 +157,8 @@ class JournalIndex extends React.Component<TokenTypes, JournalGet> {
         render() {
             return(
                 <div>
-                    <h3><u>My Day Log</u></h3>
+                    <JournalCreate token={this.props.token} JournalCo={this.JournalCo} />
+                    <h3>My Day Log</h3>
                     <this.mapJournal date={this.state.date} howDay={this.state.howDay} improveDay={this.state.improveDay} rating={this.state.rating} journal={this.state.journal} />
                 </div>
         )

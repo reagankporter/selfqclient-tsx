@@ -35,7 +35,6 @@ class Login extends React.Component <SessionProps, LoginTypes> {
                     user: {
                         username: this.state.username,
                         password: this.state.password,
-                        // role: this.state.role,
                     }
                 }),
                 headers: new Headers({
@@ -82,3 +81,7 @@ class Login extends React.Component <SessionProps, LoginTypes> {
 }
 
 export default Login;
+
+// update token to admin
+// change in auth file 
+// 

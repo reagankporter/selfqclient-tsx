@@ -19,6 +19,7 @@ class Auth extends React.Component<SessionProps, loginToggle> {
         super(props)
         this.state = {
             login: false,
+
         }
     }
 

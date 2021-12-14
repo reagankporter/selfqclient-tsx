@@ -17,7 +17,7 @@ class Journals extends React.Component<TokenTypes, {}> {
         return(
             <div>
                 <h2>Day Log</h2>
-                <JournalCreate token={this.props.token} />
+                {/* <JournalCreate token={this.props.token} /> */}
                 <JournalIndex token={this.props.token} />
             </div>
         )
