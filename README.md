@@ -49,6 +49,35 @@ The day log enables users to record their daily encounters. Users will be able t
 
 * Quote Get
 
+# Heroku Deployment Link
+
+* https://selfqclienttsxtwo.herokuapp.com
+
+# Dev Dependencies
+
+* @types/react-router-dom": "^5.3.2
+
+# Dependencies
+
+• "@material-ui/core": "^4.12.3",
+• "@testing-library/jest-dom": "^5.15.1",
+• "@testing-library/react": "^11.2.7",
+• "@testing-library/user-event": "^12.8.3",
+• "@types/jest": "^26.0.24",
+• "@types/node": "^12.20.37",
+• "@types/react": "^17.0.37",
+• "@types/react-dom": "^17.0.11",
+• "@types/react-native": "^0.66.6",
+• "bootstrap": "^5.1.3",
+• "radium": "^0.26.1",
+• "react": "^17.0.2",
+• "react-dom": "^17.0.2",
+• "react-router-dom": "^6.0.2",
+• "react-scripts": "4.0.3",
+• "reactstrap": "^9.0.1",
+• "typescript": "^4.5.2",
+• "web-vitals": "^1.1.2"
+
 # Start React App
 
 ## Use npm start to start app
