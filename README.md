@@ -76,7 +76,7 @@ The day log enables users to record their daily encounters. Users will be able t
 • "react-scripts": "4.0.3",
 • "reactstrap": "^9.0.1",
 • "typescript": "^4.5.2",
-• "web-vitals": "^1.1.2"
+• "web-vitals": "^1.1.2",
 
 # Start React App
 
