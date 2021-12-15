@@ -3,7 +3,7 @@ import Feelings from '../Feeling/Feeling';
 import Journals from '../Journal/Journal'
 import Quote from '../Quote/Quote'
 import { Route, Link, Routes } from 'react-router-dom';
-import '/Users/reagank/ElevenFiftyProjects/selfqproject/Client/selfq-client-tsx/src/Components/Site/Sidebar.css'
+import './Sidebar.css'
 
 
 type TokenTypes = {
