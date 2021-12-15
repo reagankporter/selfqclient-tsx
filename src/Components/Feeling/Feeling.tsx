@@ -1,7 +1,7 @@
 import React from 'react';
 import FeelingCreate from './FeelingCo/FeelingCreate'
 import FeelingIndex from './FeelingCo/FeelingIndex';
-import '/Users/reagank/ElevenFiftyProjects/selfqproject/Client/selfq-client-tsx/src/Components/Feeling/Feeling.css';
+import './Feeling.css';
 
 type TokenTypes ={
     token: string | null | undefined,
