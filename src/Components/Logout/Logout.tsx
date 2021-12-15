@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Logout.css"
-import logout from "/Users/reagank/ElevenFiftyProjects/selfqproject/Client/selfq-client-tsx/src/Assets/logout.svg";
+import logout from "../../Assets/logout.svg";
 
 type SessionProps = {
     clearLocalStorage: () => void,
